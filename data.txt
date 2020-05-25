@@ -1,0 +1,1602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://192.168.0.244/b2b"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://192.168.0.244/b2b"
+		name="b2b"
+		targetNamespace="http://192.168.0.244/b2b">
+	<types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xs1="http://192.168.0.244/b2b"
+				targetNamespace="http://192.168.0.244/b2b"
+				elementFormDefault="qualified">
+			<xs:element name="getDeliveryServices">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDeliveryServicesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getStorages">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getStoragesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getRegions">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getRegionsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getCities">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getCitiesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getWarehouses">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getWarehousesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getStreets">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getStreetsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getClients">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getClientsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContracts">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getContractsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="putOrder">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="putOrderResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getShops">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getShopsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrgerBill">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrgerBillResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMutualSettlement">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMutualSettlementResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getBrands">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getBrandsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getRestsPrice">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getRestsPriceResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrders">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrdersResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDirectMailing">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDirectMailingResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMassMailing">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMassMailingResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getRests_myPlay_RT">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getRests_myPlay_RTResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMutualSettlementReport">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMutualSettlementReportResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getSettlementStatus">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getSettlementStatusResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="putReturnRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="putReturnRequestResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getReturns">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getReturnsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrderPrices">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrderPricesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDistrictsUkrPost">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDistrictsUkrPostResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrderStatuses">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getOrderStatusesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="putOrderRT">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="putOrderRTResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Get_ClientManager">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Get_ClientManagerResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Get_Certificates">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Get_CertificatesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getManagerDescription">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getManagerDescriptionResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="setUpPriceListMailing">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ВходящаяСтрока"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="setUpPriceListMailingResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPriceListFormats">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPriceListFormatsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPriceListPeriodicities">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPriceListPeriodicitiesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDaysOfTheWeek">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDaysOfTheWeekResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</types>
+	<message name="getDeliveryServicesRequestMessage">
+		<part name="parameters"
+				element="tns:getDeliveryServices"/>
+	</message>
+	<message name="getDeliveryServicesResponseMessage">
+		<part name="parameters"
+				element="tns:getDeliveryServicesResponse"/>
+	</message>
+	<message name="getStoragesRequestMessage">
+		<part name="parameters"
+				element="tns:getStorages"/>
+	</message>
+	<message name="getStoragesResponseMessage">
+		<part name="parameters"
+				element="tns:getStoragesResponse"/>
+	</message>
+	<message name="getRegionsRequestMessage">
+		<part name="parameters"
+				element="tns:getRegions"/>
+	</message>
+	<message name="getRegionsResponseMessage">
+		<part name="parameters"
+				element="tns:getRegionsResponse"/>
+	</message>
+	<message name="getCitiesRequestMessage">
+		<part name="parameters"
+				element="tns:getCities"/>
+	</message>
+	<message name="getCitiesResponseMessage">
+		<part name="parameters"
+				element="tns:getCitiesResponse"/>
+	</message>
+	<message name="getWarehousesRequestMessage">
+		<part name="parameters"
+				element="tns:getWarehouses"/>
+	</message>
+	<message name="getWarehousesResponseMessage">
+		<part name="parameters"
+				element="tns:getWarehousesResponse"/>
+	</message>
+	<message name="getStreetsRequestMessage">
+		<part name="parameters"
+				element="tns:getStreets"/>
+	</message>
+	<message name="getStreetsResponseMessage">
+		<part name="parameters"
+				element="tns:getStreetsResponse"/>
+	</message>
+	<message name="getClientsRequestMessage">
+		<part name="parameters"
+				element="tns:getClients"/>
+	</message>
+	<message name="getClientsResponseMessage">
+		<part name="parameters"
+				element="tns:getClientsResponse"/>
+	</message>
+	<message name="getContractsRequestMessage">
+		<part name="parameters"
+				element="tns:getContracts"/>
+	</message>
+	<message name="getContractsResponseMessage">
+		<part name="parameters"
+				element="tns:getContractsResponse"/>
+	</message>
+	<message name="putOrderRequestMessage">
+		<part name="parameters"
+				element="tns:putOrder"/>
+	</message>
+	<message name="putOrderResponseMessage">
+		<part name="parameters"
+				element="tns:putOrderResponse"/>
+	</message>
+	<message name="getShopsRequestMessage">
+		<part name="parameters"
+				element="tns:getShops"/>
+	</message>
+	<message name="getShopsResponseMessage">
+		<part name="parameters"
+				element="tns:getShopsResponse"/>
+	</message>
+	<message name="getOrgerBillRequestMessage">
+		<part name="parameters"
+				element="tns:getOrgerBill"/>
+	</message>
+	<message name="getOrgerBillResponseMessage">
+		<part name="parameters"
+				element="tns:getOrgerBillResponse"/>
+	</message>
+	<message name="getMutualSettlementRequestMessage">
+		<part name="parameters"
+				element="tns:getMutualSettlement"/>
+	</message>
+	<message name="getMutualSettlementResponseMessage">
+		<part name="parameters"
+				element="tns:getMutualSettlementResponse"/>
+	</message>
+	<message name="getBrandsRequestMessage">
+		<part name="parameters"
+				element="tns:getBrands"/>
+	</message>
+	<message name="getBrandsResponseMessage">
+		<part name="parameters"
+				element="tns:getBrandsResponse"/>
+	</message>
+	<message name="getRestsPriceRequestMessage">
+		<part name="parameters"
+				element="tns:getRestsPrice"/>
+	</message>
+	<message name="getRestsPriceResponseMessage">
+		<part name="parameters"
+				element="tns:getRestsPriceResponse"/>
+	</message>
+	<message name="getOrdersRequestMessage">
+		<part name="parameters"
+				element="tns:getOrders"/>
+	</message>
+	<message name="getOrdersResponseMessage">
+		<part name="parameters"
+				element="tns:getOrdersResponse"/>
+	</message>
+	<message name="getDirectMailingRequestMessage">
+		<part name="parameters"
+				element="tns:getDirectMailing"/>
+	</message>
+	<message name="getDirectMailingResponseMessage">
+		<part name="parameters"
+				element="tns:getDirectMailingResponse"/>
+	</message>
+	<message name="getMassMailingRequestMessage">
+		<part name="parameters"
+				element="tns:getMassMailing"/>
+	</message>
+	<message name="getMassMailingResponseMessage">
+		<part name="parameters"
+				element="tns:getMassMailingResponse"/>
+	</message>
+	<message name="getRests_myPlay_RTRequestMessage">
+		<part name="parameters"
+				element="tns:getRests_myPlay_RT"/>
+	</message>
+	<message name="getRests_myPlay_RTResponseMessage">
+		<part name="parameters"
+				element="tns:getRests_myPlay_RTResponse"/>
+	</message>
+	<message name="getMutualSettlementReportRequestMessage">
+		<part name="parameters"
+				element="tns:getMutualSettlementReport"/>
+	</message>
+	<message name="getMutualSettlementReportResponseMessage">
+		<part name="parameters"
+				element="tns:getMutualSettlementReportResponse"/>
+	</message>
+	<message name="getSettlementStatusRequestMessage">
+		<part name="parameters"
+				element="tns:getSettlementStatus"/>
+	</message>
+	<message name="getSettlementStatusResponseMessage">
+		<part name="parameters"
+				element="tns:getSettlementStatusResponse"/>
+	</message>
+	<message name="putReturnRequestRequestMessage">
+		<part name="parameters"
+				element="tns:putReturnRequest"/>
+	</message>
+	<message name="putReturnRequestResponseMessage">
+		<part name="parameters"
+				element="tns:putReturnRequestResponse"/>
+	</message>
+	<message name="getReturnsRequestMessage">
+		<part name="parameters"
+				element="tns:getReturns"/>
+	</message>
+	<message name="getReturnsResponseMessage">
+		<part name="parameters"
+				element="tns:getReturnsResponse"/>
+	</message>
+	<message name="getOrderPricesRequestMessage">
+		<part name="parameters"
+				element="tns:getOrderPrices"/>
+	</message>
+	<message name="getOrderPricesResponseMessage">
+		<part name="parameters"
+				element="tns:getOrderPricesResponse"/>
+	</message>
+	<message name="getDistrictsUkrPostRequestMessage">
+		<part name="parameters"
+				element="tns:getDistrictsUkrPost"/>
+	</message>
+	<message name="getDistrictsUkrPostResponseMessage">
+		<part name="parameters"
+				element="tns:getDistrictsUkrPostResponse"/>
+	</message>
+	<message name="getOrderStatusesRequestMessage">
+		<part name="parameters"
+				element="tns:getOrderStatuses"/>
+	</message>
+	<message name="getOrderStatusesResponseMessage">
+		<part name="parameters"
+				element="tns:getOrderStatusesResponse"/>
+	</message>
+	<message name="putOrderRTRequestMessage">
+		<part name="parameters"
+				element="tns:putOrderRT"/>
+	</message>
+	<message name="putOrderRTResponseMessage">
+		<part name="parameters"
+				element="tns:putOrderRTResponse"/>
+	</message>
+	<message name="Get_ClientManagerRequestMessage">
+		<part name="parameters"
+				element="tns:Get_ClientManager"/>
+	</message>
+	<message name="Get_ClientManagerResponseMessage">
+		<part name="parameters"
+				element="tns:Get_ClientManagerResponse"/>
+	</message>
+	<message name="Get_CertificatesRequestMessage">
+		<part name="parameters"
+				element="tns:Get_Certificates"/>
+	</message>
+	<message name="Get_CertificatesResponseMessage">
+		<part name="parameters"
+				element="tns:Get_CertificatesResponse"/>
+	</message>
+	<message name="getManagerDescriptionRequestMessage">
+		<part name="parameters"
+				element="tns:getManagerDescription"/>
+	</message>
+	<message name="getManagerDescriptionResponseMessage">
+		<part name="parameters"
+				element="tns:getManagerDescriptionResponse"/>
+	</message>
+	<message name="setUpPriceListMailingRequestMessage">
+		<part name="parameters"
+				element="tns:setUpPriceListMailing"/>
+	</message>
+	<message name="setUpPriceListMailingResponseMessage">
+		<part name="parameters"
+				element="tns:setUpPriceListMailingResponse"/>
+	</message>
+	<message name="getPriceListFormatsRequestMessage">
+		<part name="parameters"
+				element="tns:getPriceListFormats"/>
+	</message>
+	<message name="getPriceListFormatsResponseMessage">
+		<part name="parameters"
+				element="tns:getPriceListFormatsResponse"/>
+	</message>
+	<message name="getPriceListPeriodicitiesRequestMessage">
+		<part name="parameters"
+				element="tns:getPriceListPeriodicities"/>
+	</message>
+	<message name="getPriceListPeriodicitiesResponseMessage">
+		<part name="parameters"
+				element="tns:getPriceListPeriodicitiesResponse"/>
+	</message>
+	<message name="getDaysOfTheWeekRequestMessage">
+		<part name="parameters"
+				element="tns:getDaysOfTheWeek"/>
+	</message>
+	<message name="getDaysOfTheWeekResponseMessage">
+		<part name="parameters"
+				element="tns:getDaysOfTheWeekResponse"/>
+	</message>
+	<portType name="b2bPortType">
+		<operation name="getDeliveryServices">
+			<input message="tns:getDeliveryServicesRequestMessage"/>
+			<output message="tns:getDeliveryServicesResponseMessage"/>
+		</operation>
+		<operation name="getStorages">
+			<input message="tns:getStoragesRequestMessage"/>
+			<output message="tns:getStoragesResponseMessage"/>
+		</operation>
+		<operation name="getRegions">
+			<input message="tns:getRegionsRequestMessage"/>
+			<output message="tns:getRegionsResponseMessage"/>
+		</operation>
+		<operation name="getCities">
+			<input message="tns:getCitiesRequestMessage"/>
+			<output message="tns:getCitiesResponseMessage"/>
+		</operation>
+		<operation name="getWarehouses">
+			<input message="tns:getWarehousesRequestMessage"/>
+			<output message="tns:getWarehousesResponseMessage"/>
+		</operation>
+		<operation name="getStreets">
+			<input message="tns:getStreetsRequestMessage"/>
+			<output message="tns:getStreetsResponseMessage"/>
+		</operation>
+		<operation name="getClients">
+			<input message="tns:getClientsRequestMessage"/>
+			<output message="tns:getClientsResponseMessage"/>
+		</operation>
+		<operation name="getContracts">
+			<input message="tns:getContractsRequestMessage"/>
+			<output message="tns:getContractsResponseMessage"/>
+		</operation>
+		<operation name="putOrder">
+			<input message="tns:putOrderRequestMessage"/>
+			<output message="tns:putOrderResponseMessage"/>
+		</operation>
+		<operation name="getShops">
+			<input message="tns:getShopsRequestMessage"/>
+			<output message="tns:getShopsResponseMessage"/>
+		</operation>
+		<operation name="getOrgerBill">
+			<input message="tns:getOrgerBillRequestMessage"/>
+			<output message="tns:getOrgerBillResponseMessage"/>
+		</operation>
+		<operation name="getMutualSettlement">
+			<input message="tns:getMutualSettlementRequestMessage"/>
+			<output message="tns:getMutualSettlementResponseMessage"/>
+		</operation>
+		<operation name="getBrands">
+			<input message="tns:getBrandsRequestMessage"/>
+			<output message="tns:getBrandsResponseMessage"/>
+		</operation>
+		<operation name="getRestsPrice">
+			<input message="tns:getRestsPriceRequestMessage"/>
+			<output message="tns:getRestsPriceResponseMessage"/>
+		</operation>
+		<operation name="getOrders">
+			<input message="tns:getOrdersRequestMessage"/>
+			<output message="tns:getOrdersResponseMessage"/>
+		</operation>
+		<operation name="getDirectMailing">
+			<input message="tns:getDirectMailingRequestMessage"/>
+			<output message="tns:getDirectMailingResponseMessage"/>
+		</operation>
+		<operation name="getMassMailing">
+			<input message="tns:getMassMailingRequestMessage"/>
+			<output message="tns:getMassMailingResponseMessage"/>
+		</operation>
+		<operation name="getRests_myPlay_RT">
+			<input message="tns:getRests_myPlay_RTRequestMessage"/>
+			<output message="tns:getRests_myPlay_RTResponseMessage"/>
+		</operation>
+		<operation name="getMutualSettlementReport">
+			<input message="tns:getMutualSettlementReportRequestMessage"/>
+			<output message="tns:getMutualSettlementReportResponseMessage"/>
+		</operation>
+		<operation name="getSettlementStatus">
+			<input message="tns:getSettlementStatusRequestMessage"/>
+			<output message="tns:getSettlementStatusResponseMessage"/>
+		</operation>
+		<operation name="putReturnRequest">
+			<input message="tns:putReturnRequestRequestMessage"/>
+			<output message="tns:putReturnRequestResponseMessage"/>
+		</operation>
+		<operation name="getReturns">
+			<input message="tns:getReturnsRequestMessage"/>
+			<output message="tns:getReturnsResponseMessage"/>
+		</operation>
+		<operation name="getOrderPrices">
+			<input message="tns:getOrderPricesRequestMessage"/>
+			<output message="tns:getOrderPricesResponseMessage"/>
+		</operation>
+		<operation name="getDistrictsUkrPost">
+			<input message="tns:getDistrictsUkrPostRequestMessage"/>
+			<output message="tns:getDistrictsUkrPostResponseMessage"/>
+		</operation>
+		<operation name="getOrderStatuses">
+			<input message="tns:getOrderStatusesRequestMessage"/>
+			<output message="tns:getOrderStatusesResponseMessage"/>
+		</operation>
+		<operation name="putOrderRT">
+			<input message="tns:putOrderRTRequestMessage"/>
+			<output message="tns:putOrderRTResponseMessage"/>
+		</operation>
+		<operation name="Get_ClientManager">
+			<input message="tns:Get_ClientManagerRequestMessage"/>
+			<output message="tns:Get_ClientManagerResponseMessage"/>
+		</operation>
+		<operation name="Get_Certificates">
+			<input message="tns:Get_CertificatesRequestMessage"/>
+			<output message="tns:Get_CertificatesResponseMessage"/>
+		</operation>
+		<operation name="getManagerDescription">
+			<input message="tns:getManagerDescriptionRequestMessage"/>
+			<output message="tns:getManagerDescriptionResponseMessage"/>
+		</operation>
+		<operation name="setUpPriceListMailing">
+			<input message="tns:setUpPriceListMailingRequestMessage"/>
+			<output message="tns:setUpPriceListMailingResponseMessage"/>
+		</operation>
+		<operation name="getPriceListFormats">
+			<input message="tns:getPriceListFormatsRequestMessage"/>
+			<output message="tns:getPriceListFormatsResponseMessage"/>
+		</operation>
+		<operation name="getPriceListPeriodicities">
+			<input message="tns:getPriceListPeriodicitiesRequestMessage"/>
+			<output message="tns:getPriceListPeriodicitiesResponseMessage"/>
+		</operation>
+		<operation name="getDaysOfTheWeek">
+			<input message="tns:getDaysOfTheWeekRequestMessage"/>
+			<output message="tns:getDaysOfTheWeekResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="b2bSoapBinding"
+			type="tns:b2bPortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="getDeliveryServices">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDeliveryServices"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getStorages">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getStorages"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getRegions">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getRegions"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getCities">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getCities"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getWarehouses">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getWarehouses"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getStreets">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getStreets"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getClients">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getClients"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContracts">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getContracts"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="putOrder">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:putOrder"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getShops">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getShops"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrgerBill">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrgerBill"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getMutualSettlement">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getMutualSettlement"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getBrands">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getBrands"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getRestsPrice">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getRestsPrice"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrders">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrders"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getDirectMailing">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDirectMailing"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getMassMailing">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getMassMailing"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getRests_myPlay_RT">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getRests_myPlay_RT"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getMutualSettlementReport">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getMutualSettlementReport"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getSettlementStatus">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getSettlementStatus"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="putReturnRequest">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:putReturnRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getReturns">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getReturns"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrderPrices">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrderPrices"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getDistrictsUkrPost">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDistrictsUkrPost"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrderStatuses">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrderStatuses"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="putOrderRT">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:putOrderRT"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="Get_ClientManager">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:Get_ClientManager"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="Get_Certificates">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:Get_Certificates"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getManagerDescription">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getManagerDescription"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="setUpPriceListMailing">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:setUpPriceListMailing"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPriceListFormats">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getPriceListFormats"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPriceListPeriodicities">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getPriceListPeriodicities"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getDaysOfTheWeek">
+			<soapbind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDaysOfTheWeek"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="b2bSoap12Binding"
+			type="tns:b2bPortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="getDeliveryServices">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDeliveryServices"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getStorages">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getStorages"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getRegions">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getRegions"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getCities">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getCities"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getWarehouses">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getWarehouses"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getStreets">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getStreets"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getClients">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getClients"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getContracts">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getContracts"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="putOrder">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:putOrder"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getShops">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getShops"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrgerBill">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrgerBill"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getMutualSettlement">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getMutualSettlement"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getBrands">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getBrands"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getRestsPrice">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getRestsPrice"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrders">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrders"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getDirectMailing">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDirectMailing"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getMassMailing">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getMassMailing"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getRests_myPlay_RT">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getRests_myPlay_RT"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getMutualSettlementReport">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getMutualSettlementReport"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getSettlementStatus">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getSettlementStatus"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="putReturnRequest">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:putReturnRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getReturns">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getReturns"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrderPrices">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrderPrices"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getDistrictsUkrPost">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDistrictsUkrPost"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getOrderStatuses">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getOrderStatuses"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="putOrderRT">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:putOrderRT"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="Get_ClientManager">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:Get_ClientManager"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="Get_Certificates">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:Get_Certificates"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getManagerDescription">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getManagerDescription"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="setUpPriceListMailing">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:setUpPriceListMailing"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPriceListFormats">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getPriceListFormats"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getPriceListPeriodicities">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getPriceListPeriodicities"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getDaysOfTheWeek">
+			<soap12bind:operation style="document"
+					soapAction="http://192.168.0.244/b2b#b2b:getDaysOfTheWeek"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="b2b">
+		<port name="b2bSoap"
+				binding="tns:b2bSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soapbind:address location="http://176.111.63.105/ERP_copy/ws/b2b"/>
+		</port>
+		<port name="b2bSoap12"
+				binding="tns:b2bSoap12Binding">
+			<soap12bind:address location="http://176.111.63.105/ERP_copy/ws/b2b"/>
+		</port>
+	</service>
+</definitions>
